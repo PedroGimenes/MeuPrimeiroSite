@@ -2,7 +2,7 @@ body{
     background-color: rgb(255, 255, 255);
     background-size: contain;
     background-repeat: no-repeat;
-    background-image: url("../img/oiaquelegal.png")
+    background-image: url("../img/oasd.jpg")
 }
 header{
     display: flexbox;
@@ -10,8 +10,70 @@ header{
     align-items: center;
     padding: 3%;
 }
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+nav ul li {
+    margin: 0 10px;
+}
+nav ul li a {
+    color: black;
+    text-decoration: none;
+    padding: 10px 15px;
+    display: block;
+}
+.menu-icon {
+    display: none;
+    font-size: 30px;
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+}
+#menu-toggle {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .menu-icon {
+        display: block;
+        padding-right: 10px;
+    }
+
+    nav ul {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: #ffffff;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        z-index: 1000;
+        padding: 0;
+    }
+
+    #menu-toggle:checked + .menu-icon + ul {
+        display: flex;
+    }
+
+    nav ul li {
+        text-align: center;
+        margin: 0;
+    }
+
+    nav ul li a {
+        padding: 15px 0;
+    }
+    
+    nav ul li label {
+        width: 100%;
+        display: block;
+    }
+}
+
 .logo img{ 
-    width: 15%;
+    width: 50%;
     max-width: 100%;
     height: auto;
 }
@@ -35,6 +97,8 @@ figure figcaption{
     color: black;
 }
 main{
+    margin-top: 70px;
+    padding: 20px;
 
     width: 80%;
     margin-left: auto;
@@ -49,7 +113,16 @@ footer{
     padding: 3%;
 }
 .cabecalho{
-    padding: 3%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #c9c9c9;
+    padding: 10px 20px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    box-sizing: border-box;
 }
 .rodape{
     padding: 3%;
@@ -63,7 +136,7 @@ p{
     line-height: 1.5;
     font-size: 1.2em;
     text-align: justify;
-    color: rgb(155, 9, 9);
+    color: rgb(139, 134, 134);
 }
 ul,li{
     line-height: 1.5;
@@ -74,7 +147,7 @@ h1{
 }
 h2{
     font-size: 1.5em;
-    color: gold;
+    color: rgb(0, 0, 0);
 }
 table{
     margin-left: auto;
@@ -93,4 +166,8 @@ table{
   }
   tr:nth-child(even) {
     background-color: rgb(97, 49, 209);
+  }
+  img{
+    width: 240px;
+    height: auto;
   }
